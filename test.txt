@@ -1,0 +1,35 @@
+Your Prisma schema is correct for your use case.
+However, to ensure everything works, follow these steps:
+
+1. Check Your .env File
+Make sure you have a valid DATABASE_URL in your .env file, for example:
+DATABASE_URL="postgresql://username:password@localhost:5432/yourdbname"
+Replace username, password, and yourdbname with your actual PostgreSQL credentials
+2. Migrate Your Database
+After editing your schema or .env, run these commands in your backend folder:
+npx prisma migrate dev --name init
+This will create the table in your database.
+
+3. Generate the Prisma Client
+After migration, always run:
+npx prisma generate
+
+
+4. Restart Your Backend
+After migration and generation, restart your backend server:
+npm run start
+
+5. Test Your API
+Now, POST requests to /api/requests with:
+{
+  "guestPhone": "555-1234",
+  "requestText": "Need more pillows"
+}
+should work and save data to your database.
+
+Summary:
+
+Your schema is fine.
+Make sure your DATABASE_URL is correct.
+Run npx prisma migrate dev --name init and npx prisma generate.
+Restart your backend.

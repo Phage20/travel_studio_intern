@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+.env
+.env.local
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Prisma
+prisma/migrations/
+
+# Logs
+*.log

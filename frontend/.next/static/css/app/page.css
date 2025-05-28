@@ -1,0 +1,99 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/dashboard.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.dashboard-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #1e3a8a;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(30,58,138,0.08);
+  animation: fadeInDown 0.7s;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.dashboard-table {
+  width: 95%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30,58,138,0.12);
+  overflow: hidden;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+  animation: fadeInUp 0.7s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.dashboard-table th, .dashboard-table td {
+  padding: 18px 20px;
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dashboard-table thead {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+}
+
+.dashboard-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.dashboard-table tbody tr:hover {
+  background: #dbeafe;
+  transform: scale(1.01);
+  box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+}
+
+.dashboard-table td {
+  color: #1e293b;
+}
+
+@media (max-width: 700px) {
+  .dashboard-table, .dashboard-table thead, .dashboard-table tbody, .dashboard-table th, .dashboard-table td, .dashboard-table tr {
+    display: block;
+    width: 100%;
+  }
+  .dashboard-table thead {
+    display: none;
+  }
+  .dashboard-table tr {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(30,58,138,0.07);
+  }
+  .dashboard-table td {
+    padding: 14px 10px;
+    position: relative;
+    text-align: right;
+  }
+  .dashboard-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    font-weight: bold;
+    color: #2563eb;
+    text-align: left;
+  }
+}
