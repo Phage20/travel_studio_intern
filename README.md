@@ -72,7 +72,7 @@ travel-studio-intern-assignment/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/travel-studio-intern-assignment.git
+git clone https://github.com/Phage20/travel_studio_intern.git
 cd travel-studio-intern-assignment
 ```
 
